@@ -1,0 +1,429 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.siteWelcome{
+	display: none;
+	position: fixed;
+	top: 0;left: 0;width: 100%;height: 100%;
+	background: #888;
+	z-index: 1;
+	justify-content: center;
+	align-items: center;
+}
+.siteWelcome.active{
+	display: flex;
+}  
+.circle{
+	        width: 200px;
+			height: 200px;
+			border:1px solide red;
+			position: relative;
+			
+}
+.circle::before,.circle::after{
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: black;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin:auto;
+			animation: ss  1s infinite;
+		}
+		.circle::after{
+			animation-delay: 0.85s;
+		} 
+
+		
+		@keyframes ss{
+			0%{ width: 0px;
+				height: 0px;
+				opacity: 1;
+
+			}
+			100%{
+				width: 100px;
+				height: 100px;
+				opacity: 0;
+			}
+		}
+
+.clearfix::after{
+	content: '';
+	display: block;
+	clear:both;
+
+}
+body{
+	background-color: black;
+	color: white;
+}
+.top {
+	 position: fixed; 
+	width: 100%;
+	/* border: 1px solid blue;  */
+	padding 15px;
+	
+	/* margin-top: 10px; */
+
+	
+
+}
+  
+.logo {
+	display: block;
+	margin-left: 10px;
+	text-decoration: none;
+	float: left; 
+	padding: 30px;
+	/* border: 1px solid white; */
+}
+
+ .citie{
+	background: white;
+	transition: all 1s;
+	z-index: 1;
+	 box-shadow: 0 0 15px rgba(0, 0, 0 ,0.3); 
+	color: black;
+}
+ 
+	
+nav {
+	float: right;
+	margin-right: 60px; 
+	padding: 20px;
+} 
+nav>ul{
+	/* border: 1px solid black */
+}	
+
+nav>ul>li{
+	display: inline-block; 
+	list-style: none;
+	/* border: 1px solid green;  */
+	position: relative; 
+	margin:10px;
+	white-space: nowrap;
+	/* font-size: 12px;
+	font-weight: bold;
+	margin-left: 9px;
+	margin-right: 10px;
+	color: #b7b7b7;
+	
+	border: transparent 3px ;
+	padding: 5px;
+	display: inline-block; */
+} 
+nav>ul>li>a{
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	/* margin-left: 17px;
+	margin-right: 17px; */
+	color: inherit;
+	position: relative;
+	
+	border: transparent 3px ;
+	
+	display: inline-block;
+	text-decoration:none;
+}
+.navbar11:hover .submenu{
+	display: block;
+}
+.nanbar{
+	/* border: 1px solid black; */
+}
+nav>ul>li>a:hover::after{
+	content: '';
+	display: block;
+	position: absolute;
+	top:100%;
+	left: 0;
+	width: 100%;
+	background: #e06567;
+	height: 3px;
+	animation: menu 0.5s;
+
+}
+nav>ul>li>a.active::after{
+	content: '';
+	display: block;
+	position: absolute;
+	top:100%;
+	left: 0;
+	width: 100%;
+	background: #e06567;
+	height: 3px;
+	animation: menu 0.5s;
+
+}
+@keyframes menu{
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 100%;
+	}
+}
+.text99{
+	height: 1000px;
+	width: 100%;
+}
+
+
+.navbar11{
+	position: relative;
+	
+} 
+ nav>ul>li>ul>{
+	/* border: 1px solid red; */
+	
+	/* position: absolute;
+	top:100%; */
+	
+	color:red;
+
+} 
+.submenu{
+	
+	position: absolute;
+	display: none;
+	color: red;
+	background:white;
+
+	top:100%;
+	left:0;
+	
+	text-decoration:none
+	
+
+}
+.submenu>li>a{
+	
+	text-decoration:none
+	font-size:inherit;
+}
+nav>ul>li>ul>li{list-style: none;}
+
+/* nav>ul>li>ul>{
+	display: block;
+} */
+.navbar-child{
+	display: none;
+}
+/*  .citie{
+	background: white;
+	 background-color: rgba(0,0,0,0.8); 
+	color: black; 
+
+
+} */
+nav>div>a:hover {
+	 border-bottom:3px solid #e06567;  
+	display: inline:block;
+}
+.rs{
+    margin-right:5px;
+	font-size: 24px;
+	color:#e6686a;
+	 font-family: 'Arial Black'
+
+	 
+
+}
+.logo-cart{
+	font-size: 24px;
+	color:#9a9da2;
+	font-family:'Arial Black'
+	
+}
+.banner{
+	height: 515px;
+	background-image:url(./img/rs-cover.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+.banner .mask{
+	
+	height: 515px;
+	background-color:rgba(0,0,0,0.8);
+}
+.usercart{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+	color: black;
+	box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.49);
+	
+}
+ .usercart .we {
+	background:#e6688a;
+	color: white;
+	padding: 4px 16px;
+	display: inline-block;
+	position: relative;
+	
+	margin-top: 55px;
+	margin-bottom: 20px;
+}
+ .usercart .we .sanjiao{
+	  margin-left: 5px;
+	  border:10px solid transparent ;
+	  border-left-color:#e6686a;
+	  border-top-width:0px;
+	  height:0px;
+	  width:0px;
+	  display: block;
+	  position: absolute;
+	  top:100%;
+	  left: 5px;
+ } 
+ .picture{float: left;
+		  margin:60px; 
+ }
+ .text{
+ 	float: left;
+	margin: 10px; 
+ } 
+  hr{margin-top: 23px; 
+ 	margin-bottom: 23px;
+ 	 width: 340px; 
+ 	 border:1px solid #ededed;
+ } 
+
+  dl dt,dl dd{
+  	float: left; 
+  
+  } 
+  dl dt{
+  	font-weight:bold;
+  	width:30%;
+
+  }
+  dl dd{
+  	margin-bottom:20px;
+  	width: 70%;
+  	color: #b7b7b7;
+  	
+  }
+	
+ hr{width:100%}
+ h1{
+ 	margin-bottom: 10px;
+ }
+ footer {
+ 	background:#e6686a;
+ 	
+ 	max-width: 940px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	text-align:center; 
+ }
+ .text99{
+ 	width: inherit;
+ 	color: black;
+ }
+ 
+ footer>a {
+	
+	text-decoration: none;
+	display:inline-block;
+	width: 45px;
+	padding: 5px;
+	line-height: 30px;
+	border-radius: 50%;
+	margin:16px;
+ }
+ footer>a:hover{
+ 	background: #cf5d5f;
+ }
+ footer a .icon{
+ 	width: 30px;
+ 	height: 30px;
+ 	fill: white;
+ 	margin:0 0;
+
+ 	
+
+ }
+ body{background:rgb(239,239,239);}
+body main{
+	margin-top: -340px;
+}
+
+body > main .downloadJianli{
+ 	 border: 1px solid #cddfd1;
+ 	  padding: 21px 55px;
+ 	  display:inline-block;
+ 	  background: #efefef;font-size:15px;
+ 	  font-weight: bold;border-radius: 2px;
+ 	  text-decoration: none;
+ 	  color: #3d4451;
+ 	  transition: box-shadow 0.5s;
+ 	  
+ }
+ body > main .downloadJianli:hover{
+ 	box-shadow: 0px 3px 12px 1px rgba(0,0,0,0.49);
+
+ }
+ body > main .downloadJianli-f{
+ 	text-align: center; margin:32px 0px;
+
+ }
+.self{max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	font-family: "楷体";
+}
+.jineng{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto ;
+	margin-top: 70px;
+}
+.jineng > h2{
+	text-align:center;
+}
+.jineng > ol{
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+	color: black;
+	box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.49);
+	list-style: none;
+	padding:42px 50px 30px;
+	margin-top: 34px;
+}
+section ol li{
+	float: left;
+	width: 46%;
+	
+}
+section ol li:nth-child(even){
+	float: right;
+}
+
+.jindutiao{
+	height: 5px;
+	background: #FAE1E1;
+	margin-bottom: 40px;
+}
+.jindu{
+	height:3px;
+	background:red;
+	width: 70%;
+}
+h3{
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
